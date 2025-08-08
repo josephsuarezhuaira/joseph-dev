@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es" data-ng-app="JSuarez">
+  <head>
+    <title>JSuarez | Developer</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="S2HGames_img/s2h-Team.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="S2HGames_css/s2hPrincipal.css" media="all">
+    <link rel="stylesheet" href="S2HGames_css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body data-ng-controller="MainController">
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <!-- ================================================================ -->
+    <nav>
+      <div id="nav-photo">
+        <img src="S2HGames_img/s2h-photo.png" alt="Mi foto personal">
+        <h1>Joseph Suárez Huaira</h1>
+      </div>
+      <div id="nav-box">
+        <div data-ng-click="changePanel('education');" class="nav-option s2h-column s2h-align s2h-justify s2h-cursor">
+          <span class="s2h-color-sky"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
+          <span>Educación</span>
+        </div>    
+        <div data-ng-click="changePanel('skills');" class="nav-option s2h-column s2h-align s2h-justify s2h-cursor">
+          <span class="s2h-color-sky"><i class="fa fa-briefcase" aria-hidden="true"></i></span>
+          <span>Habilidades</span>
+        </div>    
+      </div>
+    </nav>
+    <section>
+      <article data-ng-if="obj_page.panel == 'education'">
+        <div class="article-title">
+          <h2>FORMACIÓN ACADÉMICA</h2>
+          <div class="article-subtitle">
+            8 años de exeriencia            
+          </div>
+        </div>
+        <div class="article-panel">
+          <div id="article-education">
+            <div class="article-category">
+              Educación Profesional
+            </div>
+            <div class="description">
+              <p>Cursos y certificaciones formales con alto reconocimiento académico, realizados a través de edX</p>
+              <p>Plataforma global fundada por la <strong>Universidad de Harvard</strong> y el <strong>Instituto Tecnológico de Massachusetts – MIT</strong></p>
+            </div>
+            <div class="box-course">
+              <div class="card-course" data-ng-repeat="obj in arr_certificate_edx | orderBy:'-id'">
+                <div>Certificado Verificado</div>
+                <div class="card-title">{{obj.course}}</div>
+                <div>Desde</div>
+                <div class="card-school">{{obj.school}}</div>
+                <div>Completado el {{obj.date}}</div>
+                <div class="card-button s2h-cursor"> 
+                  <a ng-href="{{obj.link}}" target="_blank">Ver Certificado</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="article-learning">
+            <div class="article-category">
+              Formación Continua
+            </div>
+            <div class="description">
+              <p>Rutas de aprendizaje, insignias y credenciales digitales obtenidas a través de plataformas líderes en formación tecnológica, como:</p>
+              <p><strong>Microsoft Learn</strong>, <strong>IBM SkillsBuild</strong> y  <strong>GitHub Skills</strong></p>
+            </div>
+            <div class="box-education" data-ng-repeat="obj in arr_learn_microsoft | orderBy:'-id' track by $index" data-ng-if="$index >= obj_skill.start && $index <= obj_skill.end">
+              <div class="year">{{obj.date}}</div>
+              <div class="box-learn-title">
+                <div class="learn-trophy">
+                  <img data-ng-src="S2HGames_img/microsoft_learn/{{obj.trophy}}" alt="transact-sql-program" />          
+                </div>
+                <strong>{{obj.course}}</strong>    
+              </div>
+              <ul>
+                <li data-ng-repeat="list in obj.description">{{list.description}}</li>
+                <li>
+                  <div class="btn-certificate s2h-cursor">                    
+                    <a ng-href="{{obj.link}}" target="_blank">Ver Trofeo - {{obj.school}}</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="navigate">
+              <div class="control s2h-cursor" data-ng-click="changeSkill('previous');"><i class="fa fa-angle-double-left" aria-hidden="true"></i>&nbsp; {{obj_skill.start + 1}}</div>              
+              <div class="control s2h-cursor" data-ng-click="changeSkill('next')">{{obj_skill.end + 1}} &nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>              
+            </div> 
+          </div>
+        </div>
+      </article>  
+      <!-- PANEL DE EXPERIENCIA -->
+      <!-- ================================================================ -->          
+      <article data-ng-if="obj_page.panel == 'skills'">
+        <div class="article-title">
+          <h2>HABILIDADES PROFESIONALES</h2>
+          <div class="article-subtitle">
+            8 años de exeriencia            
+          </div>
+        </div>
+        <div class="article-panel">
+          <div id="article-education">
+            <div class="article-category">
+              FrontEnd Developer
+            </div>
+            <div class="description">
+              <p>Mis  habilidades como desarrollador FrontEnd</p>
+            </div>
+            <div class="s2h-progress-skill" data-ng-repeat="obj in arr_skill_frontend | orderBy:'-id' track by $index" data-ng-if="$index >= obj_frontend.start && $index <= obj_frontend.end">
+              <h3 class="s2h-font-skill-title">{{obj.description}}</h3>
+              <div class="s2h-progress s2h-row">
+                  <div class="s2h-anim-progress" data-ng-class="obj.range">
+                </div>
+                <div class="s2h-progress-point">
+                  <div data-ng-class="{'bg-sky': obj.score >= 80, 'bg-green': obj.score >= 50 && obj.score <= 80}" class="s2h-progress-tooltip s2h-row s2h-font-tolltip">
+                    {{obj.level}}
+                  </div>
+                  <div class="s2h-arrow" data-ng-class="{'bg-sky': obj.score >= 80, 'bg-green': obj.score >= 50 && obj.score < 80}">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navigate">
+              <div class="control s2h-cursor" data-ng-click="changeFrontEnd('previous');"><i class="fa fa-angle-double-left" aria-hidden="true"></i>&nbsp; {{obj_frontend.start + 1}}</div>              
+              <div class="control s2h-cursor" data-ng-click="changeFrontEnd('next')">{{obj_frontend.end + 1}} &nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>              
+            </div>             
+          </div>
+          <div id="article-learning">
+            <div class="article-category">
+              BackEnd Developer
+            </div>
+            <div class="description">
+              <p>Mis habilidades como desarrollador BackEnd:</p>
+            </div>
+            <div class="s2h-progress-skill" data-ng-repeat="obj in arr_skill_backend | orderBy:'-id' track by $index" data-ng-if="$index >= obj_backend.start && $index <= obj_backend.end">
+              <h3 class="s2h-font-skill-title">{{obj.description}}</h3>
+              <div class="s2h-progress s2h-row">
+                  <div class="s2h-anim-progress" data-ng-class="obj.range">
+                </div>
+                <div class="s2h-progress-point">
+                  <div class="s2h-progress-tooltip s2h-row s2h-font-tolltip" data-ng-class="{'bg-sky': obj.score >= 80, 'bg-green': obj.score >= 50 && obj.score < 80}">
+                    {{obj.level}}
+                  </div>
+                  <div class="s2h-arrow" data-ng-class="{'bg-sky': obj.score >= 80, 'bg-green': obj.score >= 50 && obj.score <= 80}">
+                  </div>
+                </div>
+              </div>
+            </div>            
+            <div class="navigate">
+              <div class="control s2h-cursor" data-ng-click="changeBackend('previous');"><i class="fa fa-angle-double-left" aria-hidden="true"></i>&nbsp; {{obj_backend.start + 1}}</div>              
+              <div class="control s2h-cursor" data-ng-click="changeBackend('next')">{{obj_backend.end + 1}} &nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>              
+            </div> 
+          </div>
+        </div>
+      </article>      
+    </section>
+    <script src="S2HGames_js/angular.min.js"></script>
+    <script src="S2HGames_js/principal.js"></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+/* Efectos Web ===========================*/
+.s2h-section-right {
+  margin: 0px auto;
+  animation-duration: 1.2s;
+  animation-name: slideright;
+  transform: translate(0px);
+}
+.s2h-section-left {
+  animation-duration: 1.2s;
+  animation-name: slideleft;
+  transform: translate(-2000px);
+}
+
+@keyframes slideright {
+  0% {
+    transform: translate(-2000px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+
+@keyframes slideleft {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(-2000px);
+  }
+}
+
+.s2h-modal-hide {
+  animation-duration: 0.9s;
+  animation-name: modalhide;
+  display: none;
+}
+.s2h-modal-show {
+  animation-duration: 0.9s;
+  animation-name: modalshow;
+  display: flex;
+}
+@keyframes modalhide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes modalshow {
+  0% {
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.s2h-credit-hide {
+  animation-duration: 0.9s;
+  animation-name: modalhide;
+  display: none;
+}
+.s2h-credit-show {
+  animation-duration: 0.9s;
+  animation-name: modalshow;
+  display: flex;
+}

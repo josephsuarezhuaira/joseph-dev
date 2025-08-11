@@ -101,7 +101,37 @@
           {id: 3, description: 'Escritura de consultas que usan funciones de ventana'},
           {id: 4, description: 'Transformación de datos mediante la implementación de pivot, unpivot, rollup y cube'}        
         ]         
-      }        
+      },
+      {
+        id:4, 
+        course: 'Escritura del primer código con C# (Introducción a C#, parte 1)',
+        school: 'Microsoft',
+        date: '10/8/2025',
+        link: 'https://learn.microsoft.com/api/achievements/share/es-es/JosephSuarezHuaira-0749/K62XY6MB?sharingId=6363F56B0923DBCB',
+        trophy: 'get-started-c-sharp-part-1.svg',
+        description: [
+          {id: 1, description: 'Escritura de código de C# por primera vez'},
+          {id: 2, description: 'Aplicación de formato de cadena básico en C#'},
+          {id: 3, description: 'Realización de operaciones básicas con números en C#'},
+          {id: 4, description: 'Proyecto guiado: cálculo e impresión de calificaciones de los alumnos'},        
+          {id: 5, description: 'Proyecto guiado: cálculo del GPA final'}        
+        ]         
+      },
+      {
+        id:5, 
+        course: 'Creación y ejecución de aplicaciones de consola de C# sencillas (Introducción a C#, parte 2)',
+        school: 'Microsoft',
+        date: '10/8/2025',
+        link: 'https://learn.microsoft.com/api/achievements/share/es-es/JosephSuarezHuaira-0749/2DFUH8DV?sharingId=6363F56B0923DBCB',
+        trophy: 'get-started-c-sharp-part-2.svg',
+        description: [
+          {id: 1, description: 'Adición de lógica de decisión al código mediante instrucciones "if", "else" y "else if" en C#'},
+          {id: 2, description: 'Almacenamiento e iteración de secuencias de datos mediante el uso de matrices y de la instrucción “foreach” en C#'},        
+          {id: 3, description: 'Creación de código legible con convenciones, espacios en blanco y comentarios en C#'},        
+          {id: 4, description: 'Proyecto guiado: desarrollo de estructuras foreach e if-elseif-else para procesar datos de matriz en C#'},        
+          {id: 5, description: 'Proyecto que plantea un desafío: desarrollo de estructuras foreach e if-elseif-else para procesar datos de matriz en C#'}
+        ]         
+      }                           
     ];
 
     $scope.arr_skill_frontend = [

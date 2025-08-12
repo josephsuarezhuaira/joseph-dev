@@ -55,7 +55,14 @@
         school: 'W3Cx',
         date: '4/8/2025',
         link: 'https://courses.edx.org/certificates/57364ade2a624056b75128b0c8c7ebb8'
-      }                      
+      },
+      {
+        id:5, 
+        course: 'Introduction to Cloud Native, DevOps, Agile, and NoSQL',
+        school: 'IBM',
+        date: '12/8/2025',
+        link: 'https://courses.edx.org/certificates/b5cbf2dc713643579bd401cad5b857b2'
+      }                             
     ];
 
     $scope.arr_learn_microsoft = [
@@ -155,9 +162,12 @@
       {description: 'RESTful APIs (CRUD completo)', level: 'Avanzado', range:'s2h-anim-90', score: 90},
       {description: 'JWT (Autenticación basada en tokens)', level: 'Avanzado', range:'s2h-anim-90', score: 90},
       {description: 'Swagger / OpenAPI (Documentación de APIs)', level: 'Avanzado', range:'s2h-anim-100', score: 100},
+      {description: 'SQL Server (T-SQL)', level: 'Avanzado', range:'s2h-anim-90', score: 90},  
       {description: 'PostgreSQL (PL/pgSQL)', level: 'Intermedio', range:'s2h-anim-75', score: 75},
       {description: 'Oracle SQL Developer (PL-SQL)', level: 'Intermedio', range:'s2h-anim-75', score: 75},
-      {description: 'SQL Server (T-SQL)', level: 'Avanzado', range:'s2h-anim-90', score: 90}  
+      {description: 'MongoDB', level: 'Intermedio', range:'s2h-anim-75', score: 75},
+      {description: 'Agile (Scrum, Kanban)', level: 'Intermedio', range:'s2h-anim-75', score: 75},  
+      {description: 'CI/CD', level: 'Intermedio', range:'s2h-anim-75', score: 75} 
     ];    
   
 

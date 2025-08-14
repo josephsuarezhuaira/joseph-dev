@@ -62,7 +62,14 @@
         school: 'IBM',
         date: '12/8/2025',
         link: 'https://courses.edx.org/certificates/b5cbf2dc713643579bd401cad5b857b2'
-      }                             
+      },
+      {
+        id:6, 
+        course: 'Introduction to Web Development with HTML5, CSS3, and JavaScript',
+        school: 'IBM',
+        date: '13/8/2025',
+        link: 'https://courses.edx.org/certificates/c4e0cd4b386149e2adec5075cba64907'
+      }                                    
     ];
 
     $scope.arr_learn_microsoft = [

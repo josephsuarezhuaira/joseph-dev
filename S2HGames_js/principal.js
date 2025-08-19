@@ -157,11 +157,52 @@
           {id: 2, description: 'Lógica y ámbito de variables mediante bloques de código en C#'},        
           {id: 3, description: 'Ramificación del flujo mediante Switch Case en C#'},        
           {id: 4, description: 'Iteración mediante la instrucción for en C#'},
-          {id: 4, description: 'Bucle mediante instrucciones do-while y while en C#'},
-          {id: 4, description: 'Proyecto guiado: estructuras de bucle y bifurcación condicional en C#'},
-          {id: 4, description: 'Proyecto desafío: bifurcación y bucle en C#'}
+          {id: 5, description: 'Bucle mediante instrucciones do-while y while en C#'},
+          {id: 6, description: 'Proyecto guiado: estructuras de bucle y bifurcación condicional en C#'},
+          {id: 7, description: 'Proyecto desafío: bifurcación y bucle en C#'}
         ]         
-      }                                   
+      },
+      {
+        id:7, 
+        course: 'Introducción a C#, parte 4',
+        school: 'Microsoft',
+        date: '15/8/2025',
+        link: 'https://learn.microsoft.com/api/achievements/share/es-es/JosephSuarezHuaira-0749/2DXKDM3V?sharingId=6363F56B0923DBCB',
+        trophy: 'csharp-data.svg',
+        description: [
+          {id: 1, description: 'Elección del tipo de datos correcto en el código de C#'},
+          {id: 2, description: 'Conversión de tipos de datos en C#'},        
+          {id: 3, description: 'Operaciones en matrices en C#'},        
+          {id: 4, description: 'Aplicación de formato en C#'},
+          {id: 5, description: 'Métodos de tipo de datos de cadena integrados en C#'}
+        ]         
+      },
+      {
+        id:8, 
+        course: 'Introducción a C#, parte 5',
+        school: 'Microsoft',
+        date: '15/8/2025',
+        link: 'https://learn.microsoft.com/api/achievements/share/es-es/JosephSuarezHuaira-0749/A4WE46C7?sharingId=6363F56B0923DBCB',
+        trophy: 'get-started-c-sharp-part-5.svg',
+        description: [
+          {id: 1, description: 'Creación de métodos de C# con parámetros'},
+          {id: 2, description: 'Creación de métodos de C# que devuelven valores'}
+        ]         
+      },
+      {
+        id:9, 
+        course: 'Introducción a C#, parte 6',
+        school: 'Microsoft',
+        date: '15/8/2025',
+        link: 'https://learn.microsoft.com/api/achievements/share/es-es/JosephSuarezHuaira-0749/NV92RKXF?sharingId=6363F56B0923DBCB',
+        trophy: 'debug-c-sharp-console-applications.svg',
+        description: [
+          {id: 1, description: 'Depuración de código y control de excepciones'},
+          {id: 2, description: 'Herramientas de depuración de Visual Studio Code para C#'},        
+          {id: 3, description: 'Control de excepciones en aplicaciones de consola de C#'},        
+          {id: 4, description: 'Iteración mediante la instrucción for en C#'}
+        ]         
+      }                                                         
     ];
 
     $scope.arr_skill_frontend = [

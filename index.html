@@ -49,17 +49,23 @@
               <p>Plataforma global fundada por la <strong>Universidad de Harvard</strong> y el <strong>Instituto Tecnológico de Massachusetts – MIT</strong></p>
             </div>
             <div class="box-course">
-              <div class="card-course" data-ng-repeat="obj in arr_certificate_edx | orderBy:'-id'">
-                <div>Certificado Verificado</div>
+              <div class="card-course" data-ng-repeat="obj in arr_certificate_edx | orderBy:'-id' track by $index" data-ng-if="$index >= obj_certificate.start && $index <= obj_certificate.end">
+                <div data-ng-if="obj.type == 'course'">Certificado Verificado</div>
+                <div data-ng-if="obj.type == 'program'" class="icon-certificate"><img src="S2HGames_img/icon-certificate.png" alt="Icon Certificate">Certificado Profesional</div>
                 <div class="card-title">{{obj.course}}</div>
                 <div>Desde</div>
                 <div class="card-school">{{obj.school}}</div>
-                <div>Completado el {{obj.date}}</div>
+                <div data-ng-if="obj.type == 'course'">Completado el {{obj.date}}</div>
+                <div data-ng-if="obj.type == 'program'">Completado en {{obj.date}}</div>
                 <div class="card-button s2h-cursor"> 
                   <a ng-href="{{obj.link}}" target="_blank">Ver Certificado</a>
                 </div>
               </div>
             </div>
+            <div class="navigate">
+              <div class="control s2h-cursor" data-ng-click="changeCertificate('previous');"><i class="fa fa-angle-double-left" aria-hidden="true"></i>&nbsp; {{obj_skill.start + 1}}</div>              
+              <div class="control s2h-cursor" data-ng-click="changeCertificate('next')">{{obj_skill.end + 1}} &nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></div>              
+            </div>             
           </div>
           <div id="article-learning">
             <div class="article-category">

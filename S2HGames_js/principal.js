@@ -6,7 +6,11 @@
   controller('MainController', function($scope, $interval){
 
     // OBJETOS DE LA WEB
-    //================================================================    
+    //================================================================ 
+   $scope.obj_certificate = {
+      start: 0,
+      end: 3
+    };         
     $scope.obj_skill = {
       start: 0,
       end: 1
@@ -33,43 +37,65 @@
         course: 'Guided Project: Web Development w/ HTML & CSS for Beginners',
         school: 'IBM',
         date: '16/7/2025',
-        link: 'https://courses.edx.org/certificates/5871a63dad724360befae6302a559211'
+        link: 'https://courses.edx.org/certificates/5871a63dad724360befae6302a559211',
+        type: 'course'
       },
       {
         id:2, 
         course: 'Back-end Application Development with Node.js and Express',
         school: 'IBM',
         date: '21/7/2025',
-        link: 'https://courses.edx.org/certificates/ed5e288cd6b540aa916097266d7fbda5'
+        link: 'https://courses.edx.org/certificates/ed5e288cd6b540aa916097266d7fbda5',
+        type: 'course'
       },
       {
         id:3, 
         course: 'Backend APIs & Microservices',
         school: 'Microsoft',
         date: '31/7/2025',
-        link: 'https://courses.edx.org/certificates/b07c622432384249a829222ab5f7c86d'
+        link: 'https://courses.edx.org/certificates/b07c622432384249a829222ab5f7c86d',
+        type: 'course'
       },  
       {
         id:4, 
         course: 'HTML5 and CSS Fundamentals',
         school: 'W3Cx',
         date: '4/8/2025',
-        link: 'https://courses.edx.org/certificates/57364ade2a624056b75128b0c8c7ebb8'
+        link: 'https://courses.edx.org/certificates/57364ade2a624056b75128b0c8c7ebb8',
+        type: 'course'
       },
       {
         id:5, 
         course: 'Introduction to Cloud Native, DevOps, Agile, and NoSQL',
         school: 'IBM',
         date: '12/8/2025',
-        link: 'https://courses.edx.org/certificates/b5cbf2dc713643579bd401cad5b857b2'
+        link: 'https://courses.edx.org/certificates/b5cbf2dc713643579bd401cad5b857b2',
+        type: 'course'
       },
       {
         id:6, 
         course: 'Introduction to Web Development with HTML5, CSS3, and JavaScript',
         school: 'IBM',
         date: '13/8/2025',
-        link: 'https://courses.edx.org/certificates/c4e0cd4b386149e2adec5075cba64907'
-      }                                    
+        link: 'https://courses.edx.org/certificates/c4e0cd4b386149e2adec5075cba64907',
+        type: 'course'
+      },
+      {
+        id:7, 
+        course: 'Introduction to Cloud Computing',
+        school: 'IBM',
+        date: '4/9/2025',
+        link: 'https://courses.edx.org/certificates/3c6724be96d840fdaa9088c51ea0c9f1',
+        type: 'course'
+      },
+      {
+        id:8, 
+        course: 'Cloud Application Development Foundations',
+        school: 'IBM',
+        date: 'Septiembre 2025',
+        link: 'https://credentials.edx.org/credentials/408b76c4d07a4e9aa9b998389bef4a42',
+        type: 'program'
+      }                                                      
     ];
 
     $scope.arr_learn_microsoft = [
@@ -237,6 +263,20 @@
 
     // FUNCIONES DE LA WEB
     //================================================================
+    $scope.changeCertificate = function(parameter) {
+      if (parameter == 'previous') {
+        if ($scope.obj_certificate.start - 4 >= 0) {
+          $scope.obj_certificate.start = $scope.obj_certificate.start - 4;
+          $scope.obj_certificate.end = $scope.obj_certificate.end - 4;          
+        }
+      }
+      else if (parameter == 'next') {
+        if (($scope.obj_certificate.end + 2) <= $scope.arr_certificate_edx.length) {
+          $scope.obj_certificate.start = $scope.obj_certificate.start + 4;
+          $scope.obj_certificate.end = $scope.obj_certificate.end + 4;          
+        }
+      }
+    };    
     
     $scope.changeSkill = function(parameter) {
       if (parameter == 'previous') {

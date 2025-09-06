@@ -189,6 +189,18 @@ article {
   font-style: oblique;
 }
 
+/* Nueva Visualización de certificados */
+.box-certification {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .box-course {
   width: 100%;
   height: auto;
@@ -199,20 +211,28 @@ article {
   align-items: center;
   flex-wrap: wrap;
 }
+.icon-certificate {
+  color: #9a1f60;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.icon-certificate > img {
+    width: 40px;  
+}
 .card-course {
     width: 200px;
     height: 250px;
     padding: 20px;
-    background-color: #f2f2f2;
     display: flex;
     flex-direction: column;
     background-image: url(../S2HGames_img/bg_certificate_03.png);
     background-position: 90% 50%;
     background-repeat: no-repeat;
     background-size: 50%;
-    border-radius: 10px;
-    box-shadow: 1px 2px 8px #00000057;
     margin: 10px;
+    border: 4px solid #e2e7ec;
 }
 .card-title {
   font-size: 18px;
